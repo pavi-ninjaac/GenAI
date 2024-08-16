@@ -1,0 +1,16 @@
+@use '_constants' as *;
+
+.left-section {
+    flex: 1 1 0.5%;
+    overflow-y: auto; // Enable vertical scrolling.
+    background-color: $left_scroll_area_color;
+    padding: 1rem;
+    .scroller {
+        --scrollbar-color: hotpink blue;
+        --scrollbar-width: thin;
+      }
+
+    .content {
+        //height: 150%; // Add some extra height for scrolling effect.
+    }
+}

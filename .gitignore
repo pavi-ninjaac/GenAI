@@ -161,4 +161,12 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
+# Ignore the openai key file.
 backend/core/open_ai_keys.py
+
+# All the pychache files.
+__pychache__/
+
+
+# Ignore the virtual environment.
+gen_ai_projects/

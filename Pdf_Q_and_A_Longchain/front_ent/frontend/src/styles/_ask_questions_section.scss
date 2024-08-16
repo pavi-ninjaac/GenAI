@@ -1,0 +1,75 @@
+@use '_constants' as *;
+
+.bottom-right-section {
+    flex: 1.5 ; /* Takes 3/4 of the right section. */
+    background-color: $ask_question_background_color;
+    padding: 1rem;
+    h2 {
+        margin-bottom: 1rem;
+      }
+
+      .question-form {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        .form-container {
+          display: flex;
+          justify-content: space-between;
+          height: 100%; /* Ensures equal height for both sides */
+        }
+
+        .question-container {
+          flex: 0.7; /* Same width as answer area */
+          display: flex;
+          flex-direction: column;
+          //justify-content: space-between; /* Align input and button properly */
+          margin-right: 1rem;
+
+          .question-input {
+            padding: 0.5rem;
+            border: 1px solid $primary_color;
+            border-radius: 5px;
+            font-size: 16px;
+            height: 50%;
+            background-color: $drop_zone_color;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+          }
+
+          .submit-button {
+            margin: 1rem;
+            background-color: $primary_color;
+            color: white;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            align-self: center;
+
+            &:hover {
+                filter: brightness(65%);
+            }
+
+            &:active {
+                filter: brightness(80%);
+            }
+          }
+        }
+
+        .answer-area {
+          flex: 1; /* Same width as question container */
+          padding: 1rem;
+          border: 1px solid $primary_color;
+          border-radius: 5px;
+          background-color: $drop_zone_color;
+          font-size: 16px;
+          resize: none;
+          height: 90%;
+          color: white;
+          font-family: 'Times New Roman', Times, serif;
+        }
+      }
+}
