@@ -1,0 +1,10 @@
+langchain-google-genai
+langchain
+langchain_community
+langchain_chroma
+pypdf
+boto3
+fastapi
+uvicorn
+python-multipart
+npm
