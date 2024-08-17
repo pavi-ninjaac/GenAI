@@ -23,6 +23,7 @@ class PdfQAChain:
     def __init__(self) -> None:
         self.docs = None
         self.splits = None
+        self.rag_chain = None
 
     def _load_data(self):
         """
@@ -72,7 +73,7 @@ class PdfQAChain:
         """
         return "\n\n".join(doc.page_content for doc in docs)
 
-    def get_chain(self):
+    def generate_chain(self):
         """
         The RAG long chain.
         """
@@ -90,7 +91,7 @@ class PdfQAChain:
         ])
 
         # 3 | Get the retriver.
-        retriever = self._store_data().as_retriever()
+        retriever = self._store_data().as_retriever(search_type="similarity", search_kwargs={"k": 3})
 
         llm = self._get_llm_model()
 
@@ -102,4 +103,4 @@ class PdfQAChain:
             | StrOutputParser()
         )
 
-        return rag_chain
+        self.rag_chain = rag_chain

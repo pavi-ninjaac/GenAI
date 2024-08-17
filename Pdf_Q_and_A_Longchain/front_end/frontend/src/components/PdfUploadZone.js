@@ -58,7 +58,7 @@ const PdfUploadZone = () => {
                 {isDragActive ? (
                 <p>Drop the PDF file here :) ...</p>
                 ) : (
-                <p>Drag and drop a PDF file here, or click the here :) ...</p>
+                <p>Drag and drop a PDF file here, or click here to select a file :) ...</p>
                 )}
             </div>
 

@@ -6,5 +6,6 @@ pypdf
 boto3
 fastapi
 uvicorn
+pydantic
 python-multipart
 pysqlite3-binary
