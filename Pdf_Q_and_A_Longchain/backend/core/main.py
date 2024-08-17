@@ -1,4 +1,4 @@
-from long_chain import PdfQAChain
+from core.long_chain import PdfQAChain
 
 
 def generate_answer(question: str) -> str:

@@ -3,8 +3,8 @@ Contains the FastAPI server related codes.
 """
 import sys
 
-sys.path.insert(0, "/home/pavithra/projects/GenAI/Pdf_Q_and_A_Longchain/backend/core/")
-sys.path.insert(0, "/home/pavithra/projects/GenAI/Pdf_Q_and_A_Longchain/backend/data/")
+sys.path.insert(0, "/home/pavithra/projects/GenAI/Pdf_Q_and_A_Longchain/backend/")
+sys.path.insert(0, "/home/pavithra/projects/GenAI/Pdf_Q_and_A_Longchain/backend/")
 
 import os
 

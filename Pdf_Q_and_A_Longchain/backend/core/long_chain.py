@@ -4,7 +4,8 @@ import sys
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 sys.path.insert(0, "/home/pavithra/projects/GenAI/Pdf_Q_and_A_Longchain/backend/data/")
 
-import constants
+import core.constants as constants
+from core.setup import set_environmental_variable
 from langchain_chroma import Chroma
 from langchain_community.document_loaders import PyPDFDirectoryLoader
 from langchain_core.output_parsers import StrOutputParser
@@ -12,7 +13,6 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnablePassthrough
 from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from setup import set_environmental_variable
 
 
 class PdfQAChain:
