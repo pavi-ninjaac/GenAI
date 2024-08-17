@@ -9,7 +9,8 @@ const AskQuestionZone = () => {
         e.preventDefault();
 
         try {
-          const response = await axios.post("http://localhost:8000/ask-question/", new URLSearchParams({ question }));
+          const response = await axios.post("http://localhost:8000/ask-question/", {"question": question}
+          );
           setAnswer(response.data.answer);
         } catch (error) {
           setAnswer("Error generating answer. Please try again.");

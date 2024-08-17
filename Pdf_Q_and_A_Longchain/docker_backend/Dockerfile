@@ -51,4 +51,4 @@ ENV PYTHONPATH ${PYTHONPATH}:/app/
 EXPOSE 8000
 
 # Set the entry point.
-#ENTRYPOINT ["/start.sh"]
+ENTRYPOINT ["/start.sh"]

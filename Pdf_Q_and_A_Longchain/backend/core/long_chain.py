@@ -55,7 +55,7 @@ class PdfQAChain:
         """
         Initialize the LLM model API.
         """
-        set_environmental_variable()
+
         llm = ChatGoogleGenerativeAI(
             model="gemini-1.5-pro",
             temperature=0,
@@ -76,6 +76,9 @@ class PdfQAChain:
         """
         The RAG long chain.
         """
+        # Set the needed environment variables.
+        set_environmental_variable()
+
         # 1 | Prepare the data documents.
         self._load_data()
         self._split_documents()
