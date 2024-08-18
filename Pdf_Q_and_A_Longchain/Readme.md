@@ -1,22 +1,24 @@
 # :sparkles: PDF Question and Answer Application -- you can upload any PDF and ask questions about it.
 
-This is a RAG application, which uses the uploaded document as a extra knowledge to answer your questions.
+Developed a containerized web application where users can upload PDFs and ask questions. Integrated a Retrieval-Augmented Generation (RAG) system using LangChain to store document data in a vector database, retrieve relevant information, and feed it to an LLM for answer generation. Built the frontend using React.js.
 
-# 1 | The Application UI:
+
+# :one: | The Application UI:
 1. This is a single page web application, looks like this:
-
+![Application page](readme_images/1_web_page.png)
 2. You can upload any PDF and ask questions about it, The LLM which integrated in the backend will analyze the document and answer your questions.
+![Question1](readme_images/2_upload_and_question1.png)
+![Question2](readme_images/3_ask_question2.png)
 
+# :two: | Skills Used :ninja:
+- RAG
+- LLM
+- Python
+- Docker
+- React JS
+- FastAPI
 
-# 2 | Skills Used
-- 1. RAG
-- 2. LLM
-- 3. Python
-- 4. Docker
-- 5. React JS
-- 6. FastAPI
-
-# 3 | How to Use.
+# :three: | How to Use.
 - 1. Run the docker containers using the below command:
 
 This will pull the Docker image from the Docker repository and run it.
@@ -34,7 +36,7 @@ CONTAINER ID   IMAGE                    COMMAND       CREATED          STATUS   
 ```
 - 2. Now you can go to **localhost:3000** to see the Web page and start interacting.
 
-# 4 | Places to improve :arrow_up:
-- 1. Make a mechanism to upload more document at the same time.
-- 2. Improve logging for better error handling.
-- 3. For UI, I can add the loading indicator when I submit a question.
+# :four: | Places to improve :arrow_up:
+-  Make a mechanism to upload more document at the same time.
+-  Improve logging for better error handling.
+- For UI, I can add the loading indicator when I submit a question.
